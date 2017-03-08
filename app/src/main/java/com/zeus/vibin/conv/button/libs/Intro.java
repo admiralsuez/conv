@@ -9,13 +9,20 @@ import android.support.v4.app.Fragment;
 import com.github.paolorotolo.appintro.AppIntro;
 import com.github.paolorotolo.appintro.AppIntroFragment;
 import com.zeus.vibin.conv.R;
+import com.zeus.vibin.conv.button.buttons.ButtonManager;
+import com.zeus.vibin.conv.button.main.Convert;
 import com.zeus.vibin.conv.button.main.MainActivity;
 
 /**
  * Created by cyber on 26-Feb-17.
  */
 
+
 public class Intro extends AppIntro {
+
+
+    ButtonManager buttonManager;
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -32,20 +39,27 @@ public class Intro extends AppIntro {
     }
     private void loadMainActivity() {
       // setContentView(R.layout.activity_main);
-        Intent mainActivity = new Intent(this, MainActivity.class);
-        startActivity(mainActivity);
-    }
-    @Override
+        Intent intent = new Intent(this, Convert.class);
+        startActivity(intent);
+            }
+
+
     public void onSkipPressed(Fragment currentFragment) {
         super.onSkipPressed(currentFragment);
+
         // Do something when users tap on Skip button.
     }
 
-    @Override
+
     public void onDonePressed(Fragment currentFragment) {
         super.onDonePressed(currentFragment);
-        loadMainActivity();
-        finish();
+        setContentView(R.layout.activity_main);
+
+        buttonManager = new ButtonManager(this);
+        //Intent intent = new Intent(this, Convert.class);
+      //startActivity(intent);
+       // buttonManager = new ButtonManager(this);
+
         // Do something when users tap on Done button.
     }
 

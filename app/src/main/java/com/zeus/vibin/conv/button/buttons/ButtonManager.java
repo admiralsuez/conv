@@ -1,6 +1,7 @@
 package com.zeus.vibin.conv.button.buttons;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -9,6 +10,9 @@ import android.widget.Spinner;
 
 import com.zeus.vibin.conv.R;
 import com.zeus.vibin.conv.button.display.DisplayHandler;
+import com.zeus.vibin.conv.button.libs.Intro;
+import com.zeus.vibin.conv.button.main.Convert;
+import com.zeus.vibin.conv.button.main.MainActivity;
 import com.zeus.vibin.conv.button.math.Maths;
 
 //import displayhandler and math java files
@@ -69,7 +73,7 @@ public class ButtonManager {
         displayHandler.clearScreen();
     }
 
-    public void equalsClick() {
+     public void equalsClick() {
         maths.equals();
         displayHandler.setNewNumber(true);
         maths.setFiOp(0f);

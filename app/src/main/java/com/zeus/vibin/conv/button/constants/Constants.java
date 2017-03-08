@@ -5,5 +5,8 @@ package com.zeus.vibin.conv.button.constants;
  */
 public class Constants {
     public static String packetApi = "http://www.zeusandthor.net/values.json";
+    public static String FLAG="It the start";
+    }
 
-}
+
+

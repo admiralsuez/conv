@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.app.Fragment;
+import com.zeus.vibin.conv.R;
 
 
 import android.support.annotation.Nullable;
